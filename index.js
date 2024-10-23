@@ -6,6 +6,8 @@
 const string1 = "My favorite dessert is jello";
 
 // Your code here...
+console.log(string1.indexOf("jello"));
+
 
 
 
@@ -18,6 +20,9 @@ const string1 = "My favorite dessert is jello";
 const string2 = "ABCDEFGHJKLO";
 
 // Your code here...
+const cool = string2[2]+string2[string2.length-1]+string2[string2.length-1]+string2[string2.length-2];
+console.log(cool);
+
 
 
 
@@ -30,18 +35,24 @@ const string2 = "ABCDEFGHJKLO";
 const string3 = "Na";
 
 // Your code here...
+console.log(`${string3.repeat(4)} Batman!`);
+
 
 
 
 
 /*******************************************
-       Iteration 4 | Fruite Slice
+       Iteration 4 | Fruit Slice
 *******************************************/
 // Using the string method .slice(), access and print to the console the name of your favorite fruit from a given string
 
 const fruit = "banana apple mango orange lemon kiwi watermelon grapes pear pineapple";
 
 // Your code here...
+//console.log(fruit.indexOf(`lemon`));
+//console.log(fruit.slice(26, 31));
+console.log(fruit.slice(fruit.indexOf('lemon'), fruit.indexOf('lemon') + 'lemon'.length ) );
+
 
 
 
@@ -55,14 +66,25 @@ const fruit = "banana apple mango orange lemon kiwi watermelon grapes pear pinea
 const funnyHeadline1 = "Breathing oxygen linked to staying alive";
 const funnyHeadline2 = "Students Cook & Serve Grandparents";
 
+function checkIfFunny(headline) {
+
+    if(headline.includes("oxygen")) {
+        return "The string includes the word 'oxygen'";
+    } else {
+        return "The string does not include the word 'oxygen'";
+    }
+}
 
 // Check the first headline
 // Your code here ...
+const isFunny = checkIfFunny(funnyHeadline1);
+console.log(isFunny);
 
 
 // Check the second headline
 // Your code here ...
-
+const isNotFunny = checkIfFunny(funnyHeadline2);
+console.log(isNotFunny);
 
 
 /*******************************************
@@ -72,10 +94,14 @@ const funnyHeadline2 = "Students Cook & Serve Grandparents";
 
 const string4 = "zEAWrTC9EgtxmK9w1";
 
+const isLength = string4.length;
+const isLastChar = string4.slice(-1);
 
 // a) Print the string length
 // Your code here ...
+console.log(isLength);
 
 
 // b) Print the last character in the string
 // Your code here ...
+console.log(isLastChar);
